@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>youtube</title>
+    <style>
+        
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+            padding: 0 10px 0 10px;
+            margin-bottom: 10px;
+        }
+        .leftsection img{
+            height: 40px;
+            width: 130px;
+        }
+        .leftsection{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .midsection input{
+            height: 35px;
+            width: 500px;
+            border-radius:20px;
+            border: 2px solid rgba(0, 0, 0, 0.5);
+            font-size:15px;
+            padding-left: 10px;
+        }
+        .midsection button{
+            position: relative;
+            right: 32px;
+            top: -1px;
+            height: 41px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border: 2px solid rgba(0, 0, 0, 0.5);
+        }
+        input::placeholder {
+        padding-left: 10px;
+        font-size: large;
+}
+        .rightsection i {
+            font-size: larger;
+            color: black;
+
+        }
+        .rightsection i:active{
+            color: aliceblue;
+        }
+        .rightsection{
+            display: flex;
+            gap: 40px;
+        }
+        .leftsection button{
+            background: transparent;
+            border: none;
+        }
+        .leftsection i {
+            margin-top: 5px;
+            font-size: large;
+        }
+        nav{
+            height: calc(100vh - 5.6rem);
+            width: 280px;
+            background-color:white;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            margin-left:15px;
+            width: 190px;
+            position: sticky;
+        }
+        nav a{
+            width: 160px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: black;
+            padding-bottom:20px;
+        }
+        nav a:hover{
+            background-color: lightgray;
+            border-radius: 10px;
+            position: relative;
+            left:10px;
+        }
+        nav a i,span{
+            position: relative;
+            top: 10px;
+            left:5px;
+        }
+        .view{
+            display: flex;
+        }
+        main{
+            display: flex;
+            justify-content: space-between;
+            width: calc( 100% - 280px );
+            margin:30px 10px 0 10px ;
+            overflow-y: auto;
+            flex-wrap: wrap;
+        }
+        main img{
+            height: 220px;
+            width: 405px;
+            margin: 0%;
+            border-radius: 10px;
+        }
+        main a{
+            text-decoration: none;
+            color: black;
+        }
+        main img:hover{
+            height: 221px;
+            width: 406px;
+        }
+        .vedio-container{
+            height: 320px;
+        }
+        .vedio-container .details h3 {
+            margin-top:10px;
+            max-width: 300px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            direction: rtl; 
+            text-align: right;
+            margin:5px 0 5px 0;
+        }
+        .details {
+           width: 100%;
+           display: flex;
+           flex-direction: column;
+           align-items: end;
+           margin-left: -20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="leftsection">
+            <button><i class="fa-solid fa-bars"></i></button>
+            <img src="youtube-logo.png" alt="">
+        </div>
+        <div class="midsection">
+            <input type="text" placeholder="search...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="rightsection">
+            <a href=""><i class="fa-solid fa-user"></i> </a>
+            <a href=""><i class="fa-solid fa-bell"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </header>
+    <div class="view">
+        <nav>
+            <a href="">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-upload"></i>
+                <span>Upload</span>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-download"></i>
+                <span>Download</span>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-clock"></i>
+                <span>Watch Later</span>
+            </a>
+            <hr>
+            <a href="">
+                <i class="fa-solid fa-phone"></i>
+                <span>Help</span>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <span>Likes</span>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-cloud"></i>
+                <span>Cloud</span>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-star"></i>
+                <span>Favourites</span>
+            </a>
+            <hr>
+            <a href="">
+                <i class="fa-solid fa-comment"></i>
+                <span>Comments</span>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-trash"></i>
+                <span>Trash</span>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-video"></i>
+                <span>Live</span>
+            </a>
+            <hr>
+            <a href="">
+                <i class="fa-solid fa-tags"></i>
+                <span>Tags</span>
+            </a>
+            <a href="">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Whatsapp</span>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-trophy"></i>
+                <span>Achivments</span>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-robot"></i>
+                <span>AI</span>
+            </a>
+            <hr>
+            <a href="">
+                <i class="fa-brands fa-spotify"></i>
+                <span>Spotify</span>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-fire"></i>
+                <span>Trendy</span>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-gamepad"></i>
+                <span>Games</span>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-question"></i>
+                <span>Question</span>
+            </a>
+        </nav>
+        <main>
+            <div class="vedio-container">
+                <div class="thumnail">
+                    <a href=""><img src="g8UjOdAljc8-HD.jpg" alt=""></a>
+                </div>
+                <div class="details">
+                    <div class="title">
+                        <a href=""><h3>تحليل الكلاسيكو</h3></a>
+                    </div>
+                    <div class="name">
+                        <a href="">معطي</a>
+                    </div>
+                    <div class="views">
+                        Views:7k
+                    </div>
+                </div>
+            </div>
+            
+            <div class="vedio-container">
+                <div class="thumnail">
+                    <a href=""><img src="a.jpg" alt=""></a>
+                </div>
+                <div class="details">
+                    <div class="title">
+                        <a href=""><h3>لوتربرونن، سويسرا - نزهة ممطرة في أجمل قرية سويسرية - قرية القصص الخيالية</h3></a>
+                    </div>
+                    <div class="name">
+                        <a href="Travel With Me"></a>
+                    </div>
+                    <div class="views">
+                        Views:993k
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="vedio-container">
+                <div class="thumnail">
+                    <a href=""><img src="L-fOHHnVBtY-SD.jpg" alt=""></a>
+                </div>
+                <div class="details">
+                    <div class="title">
+                        <a href=""><h3>توتونيا الدحيح</h3></a>
+                    </div>
+                    <div class="name">
+                        <a href="">الدحيح</a>
+                    </div>
+                    <div class="views">
+                        Views:100k
+                    </div>
+                </div>
+            </div>
+            
+            <div class="vedio-container">
+                <div class="thumnail">
+                    <a href=""><img src="W0VpO8ZaqNs-MQ.jpg" alt=""></a>
+                </div>
+                <div class="details">
+                    <div class="title">
+                        <a href=""><h3>موسيقى للعمل - قائمة تشغيل ملهمة Chillstep</h3></a>
+                    </div>
+                    <div class="name">
+                        <a href="">Chill</a>
+                    </div>
+                    <div class="views">
+                        Views:200k
+                    </div>
+                </div>
+            </div>
+            
+            <div class="vedio-container">
+                <div class="thumnail">
+                    <a href=""><img src="9IV8VaoSACg-MQ.jpg" alt=""></a>
+                </div>
+                <div class="details">
+                    <div class="title">
+                        <a href=""><h3>تحدي يوم كامل في بريطانيا من غير فلوس هل سأنجو كريم السيد</h3></a>
+                    </div>
+                    <div class="name">
+                        <a href="">Kareem Elsayed</a>
+                    </div>
+                    <div class="views">
+                        Views:200k
+                    </div>
+                </div>
+            </div>
+            <div class="vedio-container">
+                <div class="thumnail">
+                    <a href=""><img src="JoDmepkcd-w-HD.jpg" alt=""></a>
+                </div>
+                <div class="details">
+                    <div class="title">
+                        <a href=""><h3>Python course With tracing skill (Gammal Tech) حل اسالة كورس البايثون جمال تك</h3></a>
+                    </div>
+                    <div class="name">
+                        <a href="">Gamal</a>
+                    </div>
+                    <div class="views">
+                        Views:89k
+                    </div>
+                </div>
+            </div>
+            <div class="vedio-container">
+                <div class="thumnail">
+                    <a href=""><img src="mqdefault.jpg" alt=""></a>
+                </div>
+                <div class="details">
+                    <div class="title">
+                        <a href=""><h3>Barcelona 5 x 2 Rayo Vallecano (Neymar 4 Goals) ● La Liga 15/16 Extended Goals & Highlights ᴴᴰ </h3></a>
+                    </div>
+                    <div class="name">
+                        <a href="">Barca</a>
+                    </div>
+                    <div class="views">
+                        Views:333k
+                    </div>
+                </div>
+            </div>
+            <div class="vedio-container">
+                <div class="thumnail">
+                    <a href=""><img src="q.jpg" alt=""></a>
+                </div>
+                <div class="details">
+                    <div class="title">
+                        <a href=""><h3>Beautiful Asian Music - Koto Music, Relaxing Music, Hotchiku. Sleep Music, Meditation | 3 Hours</h3></a>
+                    </div>
+                    <div class="name">
+                        <a href="">Chinese Music</a>
+                    </div>
+                    <div class="views">
+                        Views:443k
+                    </div>
+                </div>
+                
+            </div>
+            <div class="vedio-container">
+                <div class="thumnail">
+                    <a href=""><img src="ggg.jpg" alt=""></a>
+                </div>
+                <div class="details">
+                    <div class="title">
+                        <a href=""><h3>سافرت أجمل بلد في العالم | كوكب آيسلندا 🇮🇸</h3></a>
+                    </div>
+                    <div class="name">
+                        <a href="Ibn Hattuata"></a>
+                    </div>
+                    <div class="views">
+                        Views:143k
+                    </div>
+                </div>
+                
+            </div>
+            <div class="vedio-container">
+                <div class="thumnail">
+                    <a href=""><img src="wwwww.jpg" alt=""></a>
+                </div>
+                <div class="details">
+                    <div class="title">
+                        <a href=""><h3>ملحمه جلجامش</h3></a>
+                    </div>
+                    <div class="name">
+                        <a href="عبد اللطيف"></a>
+                    </div>
+                    <div class="views">
+                        Views:643k
+                    </div>
+                </div>
+                
+            </div>
+            <div class="vedio-container">
+                <div class="thumnail">
+                    <a href=""><img src="ddd.jpg" alt=""></a>
+                </div>
+                <div class="details">
+                    <div class="title">
+                        <a href=""><h3>الاصطياد في البريه</h3></a>
+                    </div>
+                    <div class="name">
+                        <a href="محمد حسان"></a>
+                    </div>
+                    <div class="views">
+                        Views:743k
+                    </div>
+                </div>
+                
+            </div>
+            <div class="vedio-container">
+                <div class="thumnail">
+                    <a href=""><img src="qqq.jpg" alt=""></a>
+                </div>
+                <div class="details">
+                    <div class="title">
+                        <a href=""><h3>تعلم اساسيات اللغتان</h3></a>
+                    </div>
+                    <div class="name">
+                        <a href="Tech"></a>
+                    </div>
+                    <div class="views">
+                        Views:543k
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>
